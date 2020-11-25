@@ -2,7 +2,13 @@
 
 
 @mixin breakpoint($point) {
-    @if $point==large-desktop {
+    @if $point==twok-above {
+        @media (min-width: 2860px) {
+            @content;
+        }
+    }
+
+    @else if $point==large-desktop {
         @media (min-width: 1900px) {
             @content;
         }
